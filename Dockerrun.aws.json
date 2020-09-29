@@ -6,7 +6,7 @@
        "image": "olusegunf/multi-client",
        "hostname": "client",
        "essential": false,
-       "memory": 512
+       "memory": 128
 
      },
 
@@ -15,14 +15,14 @@
        "image": "olusegun/multi-server",
        "hostname": "api",
        "essential": false,
-       "memory": 512
+       "memory": 128
      },
      {
        "name": "worker",
        "image": "olusegunf/multi-worker",
        "hostname": "worker",
        "essential": false,
-       "memory": 512
+       "memory": 128
      },
 
      {
@@ -30,7 +30,7 @@
        "image": "olusegunf/multi-nginx",
        "hostname": "ngnix",
        "essential": true,
-       "memory": 512,
+       "memory": 128,
        "portMappings": [
 	       {
 	         "hostPort": 80,
