@@ -22,3 +22,15 @@ after_success:
   - docker push olusegunf/multi-server
   - docker push olusegunf/multi-worker
 
+deploy:
+  region: us-east-2
+  edge: true
+  provider: elasticbeanstalk
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-us-east-2-360680948646
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
